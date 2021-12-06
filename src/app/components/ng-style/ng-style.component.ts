@@ -23,7 +23,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgStyleComponent implements OnInit {
 
-  fontSize: number = 40;
+  fontSize: number = 30;
   constructor() { }
 
   ngOnInit(): void {

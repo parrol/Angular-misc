@@ -6,7 +6,7 @@
 <button type="button" class="btn btn-warning me-3" (click)="alert='warning'"> Warning</button>
 <button type="button" class="btn btn-danger" (click)="alert='danger'"> Danger</button>
 
-<div [ngSwitch]="alert">
+<div class="mt-4" [ngSwitch]="alert">
 
     <div *ngSwitchCase="'success'" class="alert alert-success" role="alert">
         A simºººle success alert—check it out!
