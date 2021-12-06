@@ -1,0 +1,25 @@
+<h3> ngClass </h3>
+<hr>
+<div [ngClass]="alert" class="alert" role="alert">
+    A simple primary alert—check it out!
+</div>
+
+<button class="btn btn-info me-2" (click)="alert = 'alert-info'"> Info </button>
+<button class="btn btn-success" (click)="alert = 'alert-success'"> Success </button>
+
+<br><br>
+
+<h4 class="fs-6 text" [ngClass]=" { 'text-danger': props.danger, 'text-info': !props.danger }"> Hello World</h4>
+
+<button (click)="props.danger = !props.danger" class="btn btn-danger"
+    [ngClass]=" { 'btn-danger': props.danger, 'btn-info': !props.danger }">
+    Cambiar
+</button>
+
+<br><br>
+<h4 class="fs-6 text">Proceso Asíncrono</h4>
+<button (click)="execute()" [disabled]="loading" class="btn btn-primary">
+    <i class="fa" [ngClass]="{ 'fa-save': !loading, 'fa-refresh fa-spin': loading }"></i>
+    <span *ngIf="!loading"> Save changes</span>
+    <span *ngIf="loading"> Saving changes...</span>
+</button>
